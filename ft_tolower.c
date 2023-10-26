@@ -6,13 +6,13 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 20:33:28 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/10/24 20:35:56 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/10/25 21:29:38 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{
@@ -25,6 +25,6 @@ int	ft_toupper(int c)
 // int main ()
 // {
 // 	char	s = 'a';
-// 	int p = ft_toupper(s);
+// 	int p = ft_tolower(s);
 // 	printf("%c, %d", p, p);
 // }

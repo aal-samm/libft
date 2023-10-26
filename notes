@@ -1,0 +1,4 @@
+// shoud i cast or cnvert int to unsigned char
+//void	*ft_memchr(const void *s, int c, size_t n)
+
+// and for the return caue should it be voich ptr or char 

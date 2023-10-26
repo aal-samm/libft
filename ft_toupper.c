@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 19:33:14 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/10/24 20:29:37 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/10/25 21:32:31 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-//#include <stdio.h>
+// #include <stdio.h>
 
 // int main ()
 // {
-// 	char	s = 'A';
+// 	char	s = 'k';
 // 	int p = ft_toupper(s);
 // 	printf("%c, %d", p, p);
 // }

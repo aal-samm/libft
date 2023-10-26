@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 18:28:21 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/10/25 22:51:47 by aal-samm         ###   ########.fr       */
+/*   Created: 2023/10/26 23:17:51 by aal-samm          #+#    #+#             */
+/*   Updated: 2023/10/26 23:37:09 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strlen(const char *s)
+//     If needle is an empty string, haystack is returned;
+//  if needle occurs nowhere in haystack, NULL is returned; 
+//  otherwise a pointer to the first character of the first occurrence of needle is returned.
+char	*strstr(const char *haystack, const char *needle)
 {
-	int	i;
-
+	int i;
+	
 	i = 0;
-	while (*s)
+	if (needle == 0)
+		return (haystack);
+		
+	while (needle[i] != '\0')
 	{
-		i++;
-		s++;
-	}
-	return (i);
-}
-// #include <stdio.h>
-// int main ()
-// {
-//     char d[] = "1";
-//     int x = ft_strlen(d);
-//     printf("it %d chaecters", x);
-//     return 0;
-// }
+		if (needle[i] == haystack[i])
+		{
+				
+		}
+	} 
+}	

@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 15:01:30 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/10/24 20:28:33 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/10/25 22:12:45 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	n_src = (const char *)src;
 	n_dest = (char *)dest;
 	i = 0;
+	if (src == 0 && dest == 0)
+		return (0);
 	while (i < n)
 	{
 		n_dest[i] = n_src[i];

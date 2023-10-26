@@ -6,14 +6,13 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 19:43:37 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/10/24 17:08:19 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/10/26 20:09:29 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char	*restrict dst, const char *restrict src,
-size_t dstsize)
+size_t	ft_strlcpy(char	*dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
