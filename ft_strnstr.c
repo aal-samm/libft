@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:17:51 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/10/26 23:37:09 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/10/27 00:04:54 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,18 @@
 char	*strstr(const char *haystack, const char *needle)
 {
 	int i;
+	int j;
 	
 	i = 0;
 	if (needle == 0)
 		return (haystack);
 		
-	while (needle[i] != '\0')
+	while (haystack[i] != '\0')
 	{
-		if (needle[i] == haystack[i])
+		j = 0;
+		while (needle[j] != '\0' )
 		{
-				
+			if ()
 		}
 	} 
 }	

@@ -6,14 +6,13 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 10:37:57 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/10/24 20:27:29 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:30:09 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int	ft_istalpha(int x)
+int	ft_isalpha(int x)
 {
 	if ((x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z'))
 	{
@@ -22,7 +21,8 @@ int	ft_istalpha(int x)
 	return (0);
 }
 
-/*int main ()
+/*#include <stdio.h>
+int main ()
 {
     char  d = 'Q';
     if (ft_istalpha ( d))

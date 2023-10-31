@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 21:17:09 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/10/26 21:01:06 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:30:20 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void	*ft_bzero(void *ptr, size_t num);
 int		ft_isalnum(int x);
-int		ft_istalpha(int x);
+int		ft_isalpha(int x);
 int		ft_isascii(int g);
 int		ft_isdigit(int x);
 int		ft_isprint(int x);
