@@ -6,15 +6,15 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 18:28:21 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/10/25 22:51:47 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/10/31 21:05:34 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (*s)
