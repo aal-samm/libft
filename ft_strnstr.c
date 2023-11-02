@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 23:17:51 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/10/31 22:03:53 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/11/01 18:56:50 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
-	if (!needle)
+	if (*needle == 0)
 		return ((char *)haystack);
-	if (!haystack || len == 0)
-		return ((char *)haystack);
-	while (haystack)
+	if (*haystack == 0 || len == 0)
+		return (0);
+	while (haystack && i < len)
 	{
 		j = 0;
 		while (needle[j] == haystack[i + j] && (i + j) < len
@@ -41,17 +41,18 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // #include <string.h>
 // int main()
 // {
-// 	char		*result;
-// 	const char	h[] = "I am that old sdfdsf";
-// 	const char	n[] = "old";
-// 	const char *s1 = "oh no not the empty string !";
-//         const char *s2 = "";
-//         size_t max = strlen(s1);
-//         char *i1 = strnstr(s1, s2, max);
-//         char *i2 = ft_strnstr(s1, s2, max);
+// 	// const char	h[] = "I am that old sdfdsf";
+// 	// const char	n[] = "old";
+// 	// char		*result;
+// 	const char	*s1 = "";
+//     const char	*s2 = "empty";
 
-// 	result = ft_strnstr(h, n, 22);
-// 	printf("the result is: %s\n", i1);
-// 	printf("the result is: %s",i2);
+// 	size_t max = strlen(s1);
+// 	char *i1 = strnstr(s1, s2, 10);
+// 	char *i2 = ft_strnstr(s1, s2, 10);
+
+// 	// result = ft_strnstr(h, n, 22);
+// 	printf("the result 1 is: %s\n", i1);
+// 	printf("the result 2 is: %s\n",i2);
 // 	return (0);
 // }
