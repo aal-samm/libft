@@ -3,35 +3,63 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abuelnoor <abuelnoor@student.42.fr>        +#+  +:+       +#+        */
+/*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 00:43:38 by abuelnoor         #+#    #+#             */
-/*   Updated: 2023/11/06 01:32:13 by abuelnoor        ###   ########.fr       */
+/*   Updated: 2023/11/06 21:08:32 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char ft_putnbr(char c)
-{
-	wrtie(1, &c, 1);
-}
-char *ft_itoa(int n)
-{
-	int i;
-	char c;
-	int sign;
+#include "libft.h"
 
-	
-	if (n > 9)
+int	ft_count(int num)
+{
+	int	result;
+
+	result = 0;
+	if (num == 0)
+		return (1);
+	if (num < 0)
+		result = 1;
+	while (num != 0)
 	{
-		n = ft_itoa(n / 10);
-		c = (n % 10) + '0';
-		
+		result++;
+		num /= 10;
 	}
-
-	if (n = -2147483648)
-		ft_itoa('-2147483648');
-		
-	if (n >= 0 && n <= 9)
-		nb = n + '0';
-		ft_putnbr('n');
+	return (result);
 }
+
+char	*ft_itoa(int n)
+{
+	char	*new_s;
+	long	num;
+	int		len;
+
+	num = n;
+	len = ft_count(num);
+	new_s = (char *)malloc (len * sizeof(char) + 1);
+	if (!new_s)
+		return (0);
+	if (num == 0)
+		new_s[0] = '0';
+	new_s[len] = '\0';
+	if (num < 0)
+	{
+		new_s[0] = '-';
+		num = -num;
+	}
+	while (num)
+	{
+		new_s[len - 1] = (num % 10) + '0';
+		num /= 10;
+		len--;
+	}
+	return (new_s);
+}
+// int main ()
+// {
+// 	char *s;
+// 	s = ft_itoa(-0);
+// 	printf("the final resul %s", s);
+// 	return (0);
+// }
