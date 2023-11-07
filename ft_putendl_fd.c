@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 00:04:00 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/11/07 00:24:41 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/11/07 20:28:39 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putendl_fd(char *s, int fd)
 		write (fd, s, 1);
 		s++;
 	}
-	write (1, "\n", 1);
+	write (fd, "\n", 1);
 }
 // void	ft_putendl_fd(char *s, int fd)
 // {

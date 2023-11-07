@@ -43,7 +43,7 @@ $(NAME): $(OBJECTS)
 %.o: %.c
 	cc $(FLAGS) -c $< -o $@
 clean :
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS)=
 
 fclean: clean
 	rm -rf $(NAME)
