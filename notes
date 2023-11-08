@@ -6,3 +6,4 @@
 // in ft_substr is there a difference betwwen 	return ((char *)sub_str or 	return (sub_str);
 // are we allowed to use strcpy in *ft_strjoin
 
+// check itoa 

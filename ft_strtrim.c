@@ -6,13 +6,13 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 21:46:51 by abuelnoor         #+#    #+#             */
-/*   Updated: 2023/11/07 20:40:00 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/11/08 21:03:26 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_check(const char *set, char c)
+static int	ft_check(const char *set, char c)
 {
 	while (*set)
 	{

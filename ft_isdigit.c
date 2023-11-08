@@ -6,12 +6,11 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 13:04:55 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/10/23 17:40:49 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:39:36 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_isdigit(int x)
 {

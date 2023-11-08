@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abuelnoor <abuelnoor@student.42.fr>        +#+  +:+       +#+        */
+/*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:33:28 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/11/08 04:03:17 by abuelnoor        ###   ########.fr       */
+/*   Updated: 2023/11/08 18:50:04 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_word_count(char *s, char c)
+static int	ft_word_count(char const *s, char c)
 {
 	int		i;
 	int		count;
@@ -28,7 +28,7 @@ static int	ft_word_count(char *s, char c)
 	return (count);
 }
 
-static	char	*ft_word_copy(char *s, int n)
+static	char	*ft_word_copy(const char *s, int n)
 {
 	char	*p;
 	int		i;
@@ -46,50 +46,56 @@ static	char	*ft_word_copy(char *s, int n)
 	return (p);
 }
 
+void	free_all(char **s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		free(s[i]);
+		i++;
+	}
+	free(s);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**s2;
-	int		i;
-	int		j;
-	int		words;
-	int		d;
+	int		a[3];
 
-	i = 0;
-	j = 0;
-	d = 0;
-	words = ft_word_count(s, c);
-	s2 = malloc (sizeof(char *) * (words + 1));
+	a[0] = 0;
+	a[1] = 0;
+	s2 = malloc (sizeof(char *) * (ft_word_count(s, c) + 1));
 	if (!s2)
 		return (NULL);
-	while (words > 0)
+	while (ft_word_count(s, c) > a[0] && s[a[0]] != '\0')
 	{
-		while (s[i] == c)
-			i++;
-		j = i;
-		while (s[j] != c && s[j] != '\0')
-			j++;
-		s2[d] = ft_word_copy(&s[i], j - i);
-		if (!s2[d])
-		{
-			while (d >= 0)
-			{
-				free (s2[d]);
-				d--;
-			}
-			free (s2);
-			return (NULL);
-		}
-		words--;
-		d++;
-		i = j;
+		while (s[a[1]] == c)
+			(a[1])++;
+		a[2] = a[1];
+		while (s[a[2]] != c && s[a[2]] != '\0')
+			a[2]++;
+		s2[a[0]] = ft_word_copy(&s[a[1]], a[2] - a[1]);
+		if (!s2[a[0]])
+			return (free_all(s2), NULL);
+		a[1] = a[2];
+		(a[0])++;
 	}
-	s2[d] = '\0';
+	s2[a[0]] = '\0';
 	return (s2);
 }
 
-int main ()
-{
-	int x = word_count("Hekko I am anwar", 'I');
-	printf("words ccout is %d", x);
-	return (0);	
-}
+// int main ()
+// {
+// 	char c = ' ';	
+// 	const char *h ="Hekko I am anwar ";
+// 	int x;
+// 	char *o;
+// 	// x = ft_word_count(p, c);
+// 	// printf("h %d", x);
+// 	o = ft_split(h,  c);
+// 	printf("words ccout is %s", o);
+
+// 	return (0);	
+// }

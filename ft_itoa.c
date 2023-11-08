@@ -6,13 +6,13 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 00:43:38 by abuelnoor         #+#    #+#             */
-/*   Updated: 2023/11/06 21:08:32 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:49:28 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(int num)
+static int	ft_count(int num)
 {
 	int	result;
 

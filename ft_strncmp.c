@@ -6,13 +6,10 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 22:51:32 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/10/25 23:38:53 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/11/08 21:02:56 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// your strncmp does not cast in unsigned char the diff
-// [fail]: your strncmp doesn't stop at \0
-// [fail]: your strncmp does not work with non ascii chars
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

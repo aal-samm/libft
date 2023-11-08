@@ -6,13 +6,11 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 15:01:30 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/11/01 15:46:48 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:55:49 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
-// #include <stdlib.h> // Include this header for memory allocation
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -20,8 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char const	*n_src;
 	char		*n_dest;
 
-	n_src = (const char *)src;
-	n_dest = (char *)dest;
+	n_src = src;
+	n_dest = dest;
 	i = 0;
 	if (src == 0 && dest == 0)
 		return (0);
