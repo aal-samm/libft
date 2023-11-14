@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 18:20:00 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/11/09 23:22:41 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/11/14 21:58:14 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);
-	while (lst -> next)
+	while (lst-> next)
 	{
-		lst = lst -> next;
+		lst = lst-> next;
 	}
 	return (lst);
 }

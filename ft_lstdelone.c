@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 19:25:38 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/11/09 23:44:54 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/11/14 21:46:50 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 		return ;
 	del(lst-> content);
 	free(lst);
-	//lst = NULL ???????????
 }
+	//lst = NULL ???????????

@@ -6,9 +6,11 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 23:47:26 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/11/10 00:00:59 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/11/14 21:53:07 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
@@ -16,11 +18,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!lst || !del)
 		return ;
-	p = &*lst;
-	while (p->next)
+	while (*lst)
 	{
-		del(p->content);
-		free(p);
+		p = (*lst)->next;
+		del((*lst)->content);
+		free (*lst);
+		*lst = p;
 	}
-	*lst = (NULL);
+	*lst = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: aal-samm <aal-samm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 00:07:04 by aal-samm          #+#    #+#             */
-/*   Updated: 2023/11/09 23:39:27 by aal-samm         ###   ########.fr       */
+/*   Updated: 2023/11/14 23:59:47 by aal-samm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst || new)
 	{
-		new -> next = *lst;
+		new->next = *lst;
 		*lst = new;
 	}
 }
